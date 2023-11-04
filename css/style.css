@@ -1,0 +1,307 @@
+:root {
+  --primary: rgb(48, 97, 121);
+  --bg: rgba(1, 1, 3, 1);
+  --bg2: rgba(24, 24, 175, 0.8);
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: antiquewhite;
+  height: 1800px;
+}
+
+/* Navbar */
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 7%;
+  background-color: rgba(0, 0, 0, 0.589);
+  border-bottom: 1px solid #515151;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+}
+
+.Navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: beige;
+  font-style: italic;
+}
+
+.Navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.Navbar .navbar-nav a {
+  color: beige;
+  display: inline-block;
+  font-size: 1.4rem;
+  margin: 0 1rem;
+}
+
+.Navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.Navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.Navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.Navbar .navbar-ext a {
+  color: beige;
+  margin: 0 0.5rem;
+}
+
+.Navbar .navbar-ext a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* Hero Section */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/header-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 1) 3%,
+    rgba(255, 255, 255, 0) 25%
+  );
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 5em;
+  color: beige;
+  text-shadow: 2px, 2px, 4px rgba(1, 1, 3, 0.6);
+  line-height: 1.2;
+}
+
+.hero .content h1 span {
+  color: var(--primary);
+}
+
+.hero .content p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  line-height: 1.5rem;
+  font-weight: 200;
+  text-shadow: 2px, 2px, 4px rgba(1, 1, 3, 0.6);
+  mix-blend-mode: difference;
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: beige;
+  background-color: var(--bg2);
+  border-radius: 0.5rem;
+  box-shadow: 1px, 1px, 3px rgba(1, 1, 3, 0.6);
+}
+
+/* About Section */
+.about {
+  padding: 5rem 7% 1.6rem;
+  background-image: url("../img/tentang-saya.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+}
+
+.about h2 span {
+  color: var(--bg2);
+}
+
+.about .row {
+  display: flex;
+}
+
+.about .row .about-img {
+  flex: 1 1 35rem;
+}
+
+.about .row .about-img {
+  width: 100%;
+}
+
+.about .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+
+.about .row .content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.about .row .content p {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  font-weight: 200;
+  line-height: 1.6;
+}
+
+/* Tugas Section */
+
+.tugas {
+  padding: 5rem 7% 1.6rem;
+  background-image: url(../img/tentang-saya4.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.tugas h2 {
+  color: blue;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.tugas h2 span {
+  color: var(--bg2);
+}
+
+.tugas p {
+  color: #000;
+  text-align: center;
+  max-width: 50rem;
+  margin: auto;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Media Queries */
+
+/* Laptop */
+
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+  .Navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: rgba(20, 36, 36, 0.45);
+    width: 25rem;
+    height: 100vh;
+    transition: 0.5s;
+  }
+
+  .Navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .Navbar .navbar-nav a {
+    color: rgb(220, 220, 220);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .Navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .Navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+
+  .about .row .about-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about .row .content {
+    padding: 0;
+  }
+
+  .about .row .content h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .about .row .content p {
+    font-size: 1.4rem;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
