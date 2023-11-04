@@ -201,6 +201,7 @@ body {
   padding: 5rem 7% 1.6rem;
   background-image: url(../img/tentang-saya4.png);
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
 }
 
